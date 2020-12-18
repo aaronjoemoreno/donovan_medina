@@ -1,0 +1,29 @@
+@import "../css/typography.css";
+
+.contact-container input{
+    border: .1px solid #404040;
+    margin: 10px;
+    background: lightgrey;
+    width: 40%;
+}
+
+.contact-container textarea{
+    border: .1px solid #404040;
+    background: lightgrey;
+    width: 40%;
+    margin: 10px;
+}
+
+.contact-header{
+    font-family: 'main-thin';
+    font-size: 2rem;
+}
+
+.contact-container .submit{
+    background: #fff;
+}
+
+.contact-container .submit:hover{
+    cursor: pointer;
+    background: lightgray;
+}

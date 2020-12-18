@@ -1,0 +1,13 @@
+@import "../css/typography.css";
+
+.about-container{
+    text-align: center;
+    font-family: 'main-thin';
+    padding-top: 40vh;
+    padding-bottom: 40vh;
+}
+
+.about-container h1{
+    font-size: 2rem;
+    text-decoration: underline;
+}
