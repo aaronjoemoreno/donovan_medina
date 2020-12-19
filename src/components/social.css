@@ -1,0 +1,31 @@
+@import "../css/typography.css";
+
+.social-container{
+    font-family: 'main-thin';
+}
+
+.social-container h1{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.social-container h2{
+    font-size: 1.5rem;
+}
+
+.social-icons{
+    text-align: left;
+    display: flex;
+    width: 50%;
+}
+
+.social-icons a{
+    width: 30px;
+    margin: 25px 0px 0px 20px;
+}
+
+.social-icons img{
+    width: 100%;
+}
+
+

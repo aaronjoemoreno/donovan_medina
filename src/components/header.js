@@ -6,10 +6,14 @@ import { Carousel } from 'react-responsive-carousel'
 import './header.css'
 
 const Header = ({ data: { art: { nodes } } }) => {
-  let images = [
-    nodes[0].image.asset.fluid,
-    nodes[1].image.asset.fluid,
-  ]
+  let allImages = [...nodes]
+  //TODO - make this useState
+  let images = []
+
+  allImages.forEach(image => {
+    images.push(image.image.asset.fluid)
+  })
+
   return(
     <>
       <Carousel
@@ -18,14 +22,14 @@ const Header = ({ data: { art: { nodes } } }) => {
         interval="4000"
         autoPlay
       >
-                <div>
-                    <Img fluid={images[0]} />
-                    {/* <img srcSet={nodes[0].image.asset.fluid.srcSet}/> */}
-                </div>
-                <div>
-                    <Img fluid={images[1]} />
-                    {/* <img srcSet={nodes[1].image.asset.fluid.srcSet}/> */}
-                </div>
+        {images.map((img, index) => {
+          return(
+            <div key={index}>
+              <Img fluid={img} />
+            </div>
+
+          )
+        })}
             </Carousel>
     </>
   )
