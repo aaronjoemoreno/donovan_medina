@@ -6,3 +6,26 @@
     padding-top: 3rem;
     border-top: .5px solid #404040;
 }
+
+@media only screen and (max-width: 1024px) {
+    .footer-container{
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container .contact-container{
+        margin-bottom: 10rem;
+        text-align: center;
+    }
+
+    .footer-container .social-container div{
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .social-icons a{
+        padding: none;
+        margin: none;
+    }
+}
+

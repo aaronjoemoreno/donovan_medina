@@ -21,11 +21,18 @@
 
 .social-icons a{
     width: 30px;
-    margin: 25px 0px 0px 20px;
+    margin-top: 20px;
+    /* margin: 25px 0px 0px 20px; */
+}
+
+.social-icons a:nth-child(2){
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .social-icons img{
     width: 100%;
 }
+
 
 
