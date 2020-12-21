@@ -5,3 +5,136 @@
 .carousel-status{
   display: none;
 }
+
+.nav-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "left center right";
+}
+
+.nav-img{
+  grid-area: left;
+}
+
+.main-navigation{
+  display: block;
+  grid-area: right;
+}
+
+.nav-mobile {
+  position: absolute;
+  right: -5000px;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
+  display: none;
+}
+
+.hamburgerTop, .hamburgerMiddle, .hamburgerBottom {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: black;
+}
+
+.hamburgerTop, .hamburgerBottom {
+  transition: transform 0.4s ease, margin-top 0.3s ease 0.4s;
+}
+
+.hamburgerMiddle {
+  transition: opacity 0.2s ease 0.5s;
+}
+
+.hamburgerTop {
+  margin-top: 7px;
+}
+
+.hamburgerMiddle {
+  margin-top: 15px;
+}
+
+.hamburgerBottom {
+  margin-top: 23px;
+}
+
+.hamburgerTop.open, .hamburgerBottom.open {
+  transition: margin-top 0.3s ease, transform 0.4s ease 0.3s;
+}
+
+.hamburgerTop.open {
+  transform: rotate(45deg);
+  margin-top: 15px;
+}
+
+.hamburgerMiddle.open {
+  opacity: 0;
+  transition: none;
+}
+
+.hamburgerBottom.open {
+  transform: rotate(-45deg);
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-navigation{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hamburger{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    z-index: 999;
+  }
+
+  .hamburger:hover{
+    cursor: pointer;
+  }
+
+  .navigation-list{
+    display: none;
+  }
+
+  .nav-mobile.open{
+    text-align: center;
+    padding-top: 20%;
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: drop-down forwards ease 1s;
+  }
+
+  .nav-mobile ul a{
+    font-family: 'main-thin';
+    font-size: 2rem;
+    display: block;
+  }
+
+  .nav-mobile.open ul a:hover{
+    text-decoration: underline;
+  }
+
+  @keyframes drop-down {
+    0%{
+      right: -2000px;
+    }
+    25%{
+      right: -1000px;
+    }
+    50%{
+      right: 100px;
+    }
+    100%{
+      right: 0px;
+    }
+  }
+}

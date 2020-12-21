@@ -11,12 +11,11 @@ const Contact = () => {
                 method="POST"
                 data-netlify="true"
             >
-                <input type="text" className="name" placeholder="[name]" name="name" required/>
+                <input type="text" name="name" placeholder="[name]"/>
 
                 <br />
                 <input
                 type="email"
-                className="email"
                 placeholder="[email]"
                 name="email"
                 required
