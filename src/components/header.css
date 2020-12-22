@@ -7,8 +7,9 @@
 }
 
 .nav-container{
-  width: 100%;
+  width: 100vw;
   display: grid;
+  overflow: hidden;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "left center right";
 }
@@ -24,6 +25,7 @@
 
 .nav-mobile {
   position: absolute;
+  display: none;
   right: -5000px;
 }
 
@@ -104,6 +106,7 @@
   }
 
   .nav-mobile.open{
+    display: block;
     text-align: center;
     padding-top: 20%;
     z-index: 998;
