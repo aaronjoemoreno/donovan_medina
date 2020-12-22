@@ -21,6 +21,7 @@
     .footer-container .social-container div{
         margin: 0 auto;
         justify-content: center;
+        padding-bottom: 40px;
     }
 
     .social-icons a{
