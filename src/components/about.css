@@ -11,3 +11,11 @@
     font-size: 2rem;
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 1024px){
+    .about-container{
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+    }
+
+}

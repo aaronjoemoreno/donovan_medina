@@ -86,7 +86,7 @@
 @media only screen and (max-width: 1024px) {
   .carousel.carousel-slider{
     margin: 0 auto !important;
-    width: 200% !important;
+    width: 100% !important;
   }
 
   .main-navigation{
